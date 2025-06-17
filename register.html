@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> 
+    <title>Registration Page</title>
+    <style>
+      .form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: skyblue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    background-color:transparent;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: green;
+}
+
+input:focus, select:focus {
+    border-color: #5cb85c;
+    outline:Â none;
+}
+.btn:hover{
+    background-color: black;
+}
+.btn{
+    font-size:1.1rem;
+    padding: 8px 0;
+    border-radius:5px;
+    transition:0.9s;
+    cursor:pointer;
+    color: white;
+    background: rgb(125,125,235);    
+    width:100%;
+}
+.link{
+    display:flex;
+    justify-content: space-around;
+    padding:0 4rem;
+    margin:0.9rem;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Job Hustle</h1>
+   
+</header><br><br>
+    <div class="form-container" id="signUp">
+        <h1>Registration Form</h1>&nbsp;&nbsp;&nbsp;&nbsp;
+        <form id="registrationForm" action="reeeee.php" method="post">
+            <div class="input">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <div class="input">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+            </div>
+            
+            <div class="input">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+
+            <div class="input">
+            <lable for="email">Email</lable>
+            <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="input">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="input">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="input">            
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            
+            
+            <input type="submit" class="btn" value="Sign Up"></button>
+        </form>
+
+        <div class="link">
+            <p style="color:black">Already Have An Account ?</p>
+            <button> <a href="logins.html"  style="color:black; font-weight: bolder;  ">Sign In</a></button>
+        </div>
+    </div>
+    <script scr="scripts.js"></script>
+    <div class="footer">
+        <footer>
+            
+            <p> 2024 @!!!!!. Built by MNNT</p>
+        
+          </footer>
+        </div>
+</body>
+</html>

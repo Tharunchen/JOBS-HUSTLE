@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="home" href="./home.php">
+    <style>
+     
+      h2{
+        background-color: skyblue;
+        color: black;
+        padding: 3%;
+        
+        border:1px solid black;
+      }
+      section{
+        width:600px;
+        height:440px;
+
+        border:1px solid black;
+      }
+      nav{
+        padding:2%;
+        border:1px solid black;
+        font-size: 150%;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Job Hustle</h1>
+    </header>
+  <center>
+    <section id="apply">
+        <h2>Apply For A Job</h2>
+        <nav>
+             <a href="http://localhost/project1/home.php"><i class="fa-solid fa-house" style="color:black; font-size:25px; background:white;width:25%; height:50%"></i></a>
+             </nav>
+        <form id="apply-form" action="resume.php" method="post">
+          <label for="name">Name:</label>
+          <input type="Text" style="border:1px solid black" id="name" name="name" required>
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" style="border:1px solid black" id="email" name="email" required>
+          <br>
+          <label for="position">Position Applying For:</label>
+          <input list="positions" style="border:1px solid black" name="position" id="position"> 
+         
+            <datalist id="positions">
+            <option value="Editor"></option>
+            <option value="Poster designer"></option>
+          </datalist>
+          </select>
+          <br>
+          <label for="resume">Upload Resume:</label><centering>
+          <input type="file" style="border:1px solid black" id="resume" name="resume" accept=".pdf" required></centering>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </center>
+    <footer id="contact">
+      <p>&copy; 2024. Built by MNNT</p>
+    </footer>
+    
+</body>
+</html>

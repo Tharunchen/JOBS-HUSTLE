@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="home" href="./home.php">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/javascript.js"></script>
+    <style>
+              body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin:0;
+  padding:0;
+  height: 100%;
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/86/1017/75/spot-texture-background-surface-wallpaper-preview.jpg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  opacity:100; /* Sets the transparency of the background */
+  z-index: -1; /* Keeps it behind all content */
+  pointer-events: none; /* Ensures it doesn’t interfere with other elements */
+}
+
+  .fa-envelope{
+    padding:9px;
+    border-radius: 50%;
+    width: 60px;
+    height: 45px;
+    color: white;
+    margin:0 -20px;
+    background-color: #dd4b39;
+
+  }
+  .fa-linkedin{
+    padding:9px;
+    border-radius: 50%;
+    width: 60px;
+    margin:0 -20px;
+    height: 45px;
+    color: white;
+    background-color: #0e76a8;
+  }
+  .fa.house{
+    color:rgb(58, 58, 247);
+    background-color: white;
+    border-radius: 50%;
+    margin:0 30px;
+    width: 60px;
+    height: 45px;
+    color:white;
+
+  }
+  .flex{
+    display:none;
+    border:1px solid black;
+    margin:20px;
+    height:340px;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .job-cards{
+    background-color: skyblue;
+    color:black;
+    width: 300px;
+    height:100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0);
+    padding: 20px;
+    text-align: left;
+
+  }
+  .faq{
+  background-color: #fff;
+  width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin:o;
+}
+    input[type="button"]{
+        padding: 5px;
+        cursor: pointer;
+        width:30%; 
+        background-color: aquamarine;
+    }
+    input[type="button"]:hover{
+        color: 1px solid rgb(0, 0, 0) ;
+        background: rgb(235, 200, 200);
+
+    }
+
+    </style>
+
+</head>
+<body>
+    <center>
+    <header>
+        <h1>Job Hustle</h1>
+        <nav>
+          <a href="http://localhost/project1/" class="icon-like fa-house" ><i class="fa-solid fa-house" style="font-size:25px"></i></a>
+        </nav>
+    </header><br><br>
+    <section class="faq">
+      <form action="postjobs">
+       
+              <label for="faq">Q&A</label>
+              <textarea name="text" rows="5" id="text" placeholder="Text Here" style="width:60%; font-size:large;"></textarea><br>&nbsp;&nbsp;&nbsp;&nbsp;
+             
+              <input type="button" name="submit" id="button" value="Submit" >
+          
+      
+      </form>
+      
+      </section>
+    
+    <section class="job-listings">
+        <div class="job-cards">
+ <p>
+   <h3>Tharun R</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+   <nav>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="mailto:tharunchen04@gmail.com" class="icon-like fa-envelope"><i class="fa-solid fa-envelope" style=" font-size:26px;"></i></a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  &nbsp; <a href="https://www.linkedin.com/in/tharun-r-120a19311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon-like fa-linkedin"><i class="fa-brands fa-linkedin" style=" font-size:25px; width: 60px;"></i></a>
+  </nav>
+       </a>
+    </nav>
+ </p>
+
+<br><br>
+</div>
+ 
+<p>
+<div class="job-cards">
+
+
+    <h3>Nikhil Anthony A</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+  <nav> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="mailto:nikhilanthony2004@gmail.com" class="icon-like fa-envelope"><i class="fa-solid fa-envelope" style=" font-size:25px;"></i></a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  &nbsp; <a href="https://www.linkedin.com/in/ nikhil-anthony-a-986697316?utm_source=share&utm_campaign=share_via&  utm_content=profile&utm_medium=android_app" class="icon-like fa-linkedin"><i class="fa-brands fa-linkedin" style=" font-size:25px;"></i></a> </nav> 
+<br><br>
+ </div><br>
+</section>
+</p>
+
+<p>
+<section class="job-listings">
+ <div class="job-cards">
+ <h3>Nikhil N</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+ <nav>&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="mailto:nikhilnagaraju694@gmail.com" class="icon-like fa-envelope"><i class="fa-solid fa-envelope" style=" font-size:25px;"></i></a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  &nbsp; <a href="https://www.linkedin.com/in/nikhil-n-982672266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon-like fa-linkedin"><i class="fa-brands fa-linkedin" style=" font-size:25px;"></i></a></nav>
+<br><br>
+ </div>
+</p>
+
+<p>
+<div class="job-cards">
+    <h3>Mithun R</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+    <nav>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="mailto:ankithmithun67@gmail.com" class="icon-like fa-envelope"><i class="fa-solid fa-envelope" style=" font-size:25px;"></i></a> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  &nbsp; <a href="https://www.linkedin.com/in/mithun-r-ab6696316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon-like fa-linkedin"><i class="fa-brands fa-linkedin" style=" font-size:25px;"></i></a> </nav><br><br>
+</div>
+
+    </section>
+</p><br><br>
+
+
+<div class="footer">
+  <footer>
+      
+      <p> 2024 @!!!!!. Built by MNNT</p>
+  
+    </footer>
+  </div>
+
+</center>
+
+</body>
+</html>

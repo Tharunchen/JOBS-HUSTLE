@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="icon" href="/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="containers">
+        <div class="jjj">
+        <h1>List Of Jobs</h1>
+        <% if (list && list.length > 0){ %>
+            <% list.forEach(list => {%>
+            <div id="list-<%= list._id %>">
+                <lable>
+                    <input type="text" >
+                    </lable>
+            </div>
+        <% }); %>
+        <% } else { %>
+        <p>no job listed</p>
+    <% } %>
+    </div>
+    <form id="add jobs" onsubmit="addjobs(); return false;">
+        <button type="submit">post</button>
+    </form>
+    <a href="login.html">Log out</a>
+</div>
+    <script>
+        async function addjobs() {
+            const description=document.getElementById('jobDescription').value;
+            try {
+                const response = await fetch('/jobs', {
+                    method: 'POST',
+                    headers: ('Content-Type": "application/json'),
+                    body: JSON.stringify({description })
+                });
+                if (!response.ok) {
+                    const errorText=await response.text();
+                    throw new Error('Failed to add job: ${errorText} ');
+                }
+                const addedjob=await response.json();
+                console.log('Added new job:' , addedjob);
+
+                const nojobsMessage=document.getElementById('nojobs');
+                if(nojobsmassage) 
+                {
+                    nojobsmessage.remove();
+                }
+                const jobscontainer = document.getElementById('jobscontainer');
+                const newjobDiv=document.createElement('div');
+                newjobDiv.id='job-${addedjob._id}';
+                const newjobLabel=document.createElement('label');
+                const newjobCheckbox=document.createElement('input');
+                newjobCheckbox.type='checkbox';
+                newjobCheckbox.onchange=function() { job (addedjob._id, this.checked); };
+                const newjobSpan=document.createElement('span');
+                newjobSpan.appendChild(document.createTextNode(addedjob.description));
+                newjoblabel.appendChild(newjobCheckbox);
+                newjobLabel.appendChild(newjobSpan);
+                newjobDiv.appendChild(newjobLabel);
+
+                const deleteIcon=document.createElement('i');
+                deleteicon.className='fas fa-trash delete-icon';
+                deleteIcon.onclick = function() { deleteJob(addedjob._id); };
+                newjobDiv.appendChild(deleteIcon);
+                jobscontainer.appendChild(newjobDiv);
+                document.getElementById('jobDescription').value='';
+            }
+            catch(error)
+            {
+                console.error('Failed to add job:', erroe.message);
+                alert('Failed to add job:${error.message}');
+            }
+        }
+
+        async function deletejob (jobId) {
+            try{
+                const response = await fetch('/jobs/$(jobId)', {
+                    method: 'DELETE',
+                });
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error('Failed to delete todo: $(errorText)');
+                }
+                const jobDiv=document.getElementById('job-${jobId}');
+                if (jobDiv) {
+                    jobDiv.remove();
+                }
+                console.log('job deleted successfully');
+            } catch (error) {
+                console.error('Error deleting todo:', error.message);
+                alert('Failed to delete todo: ${error.message}' );
+            }
+        }
+    </script>
+</body>
+</html>

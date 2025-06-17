@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> 
+    <title>All Jobs</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.ibb.co/SvyvKNz/image.jpg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  opacity:100; /* Sets the transparency of the background */
+  z-index: -1; /* Keeps it behind all content */
+  pointer-events: none; /* Ensures it doesn’t interfere with other elements */
+}
+      
+        label {
+            text-align: left;
+        }
+        header{
+            border: auto;
+            background-color:skyblue;
+            margin: auto;
+            padding: 5px;
+
+        }
+        a:hover{
+            color:black;
+            background:linear-gradient(to right,white,skyblue);
+            border: 1px solid;
+            margin: auto;
+            padding: 5px;
+        }
+        button{
+            cursor: pointer;
+            color:black;
+            background:linear-gradient(to left,skyblue,white);
+
+        }
+        button:hover{ 
+            color:black;
+            background:linear-gradient(to left ,white,skyblue);
+        }
+        input[type="textarea"]{
+            height: 20%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <center>
+            <header>
+    <div class="logo-container">
+        <span class="brand-name">JOBS HUSTLE</span>
+    </div>
+    <nav class="navbar">
+        <a href="http://localhost/project1/" class="icon-like fa-house" ><i class="fa-solid fa-house" style="font-size:25px; margin:-2px; border-collapse: collapse;"></i></a>
+   
+</nav>
+</header><br><br>
+<section>
+    <div>
+        <form action="aljobs.php" method="post">
+            <label for="title">Job Title:</label>
+            <input type="text" id="text" name="title" placeholder="Job Title"  style="border:1px solid black" required>
+            <label for="location">location:</label>
+            <input type="location" id="location" name="location" placeholder="Location" required>
+            <label for="email">Email:</label>
+            <input type="email" id="mail" name="email" placeholder="Enter Your Email" required>
+            <label for="number">Contact Number:</label>
+            <input type="number" id="number" name="number" placeholder="Enter Your Phone number" required>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Amount" required>
+            <label for="dnum">Duration:</label>
+            <input type="text" id="dnum" name="dnum" placeholder="Timings" required>
+            <label for="description">Job Description:</label>
+            <input type="textarea" id="jobdescription" name="description" placeholder="Job Description" rows="4" required>
+
+            <button onclick="postjobs" style="color: black;"> Post Jobs</button>
+        </form>
+    </div>
+</section>
+</div>
+<section class="job-listings">
+    <div class="job-card">
+        <h2>Video Editor</h2>
+        <p><strong>required</strong></p>
+        <p>📍 Karanataka, India</p>
+        <p>💰 ₹1000</p>
+        <p>🕒 Part-time | ☀ Day Shift</p>
+        <div class="job-actions">
+            <a href="mailto:info@company.com" target="_blank"><i style="font-size: 40px;padding:9px ; width:60px; margin: -10px; height:60px; color:white;border-radius: 50% ; background-color:#dd4b39 ;  " class="fas fa-envelope"></i>
+                </a>&nbsp;
+            <a href="tel:+1234567890" target="_blank"> <i style="font-size: 36px; color: blue;background-color: white;" class="fas fa-phone"></i>
+            </a>
+        </div>
+    </div>
+    <div class="job-card">
+        <h2>Promoter</h2>
+        <p><strong>male required </strong></p>
+        <p>📍Karanataka, India</p>
+        <p>💰 ₹700 per day</p>
+        <p>🕒 7.30am to 11am | 3.30pm to 8pm</p>
+        <div class="job-actions">
+            <a href="mailto:info@company.com" target="_blank"><i style="font-size: 40px;padding:9px ; width:60px; margin:-10px; height:60px; color:white;border-radius: 50% ; background-color:#dd4b39 ;  " class="fas fa-envelope"></i>
+            </a>&nbsp;
+        <a href="tel:+1234567890" target="_blank">
+          
+            
+            <i style="font-size: 36px; color: blue;background-color: white;" class="fas fa-phone"></i>
+            </a>
+            </div>
+    </div>
+    <div class="job-card">
+        <h2>Female Hostess</h2>
+        <p><strong>minimum 2 female required</strong></p>
+        <p>📍 Karanataka, India</p>
+        <p>💰 ₹1000 + ₹100</p>
+        <p>🕒 2pm to 7pm</p>
+        <div class="job-actions">
+            <a href="mailto:info@company.com" target="_blank"><i style="font-size: 40px;padding:9px ; width:60px; margin:-10px; height:60px; color:white;border-radius: 50% ; background-color:#dd4b39 ;  " class="fas fa-envelope"></i>
+            </a>&nbsp;
+        <a href="tel:+1234567890" target="_blank">
+          
+            
+            <i style="font-size: 36px;color: blue;background-color: white;" class="fas fa-phone"></i>
+        </a>
+        </div>
+    </div> <br>&nbsp;
+
+</section>
+
+<section class="job-listings">
+    <div class="job-card">
+        <h2>Photo Editor</h2>
+        <p><strong>required</strong></p>
+        <p>📍 Karanataka, India</p>
+        <p>💰 ₹1000</p>
+        <p>🕒 Part-time | ☀ Day Shift</p>
+        <div class="job-actions">
+            <a href="mailto:info@company.com" target="_blank"><i style="font-size: 40px;padding:9px ; width:60px; margin:-10px; height:60px; color:white;border-radius: 50% ; background-color:#dd4b39 ;  " class="fas fa-envelope"></i>
+            </a>&nbsp;
+        <a href="tel:+1234567890" target="_blank">
+          
+            
+            <i style="font-size: 36px; color: blue;background-color: white;" class="fas fa-phone"></i>
+        </a>
+        </div>
+    </div>
+    <div class="job-card">
+        <h2>Package Delivery</h2>
+        <p><strong>male required </strong></p>
+        <p>📍 Karanataka, India</p>
+        <p>💰 ₹700 per day</p>
+        <p>🕒 7.30am to 11am | 3.30pm to 8pm</p>
+        <div class="job-actions">
+            <a href="mailto:info@company.com" target="_blank"><i style="font-size: 40px;padding:9px ; width:60px; margin:-10px; height:60px; color:white;border-radius: 50% ; background-color:#dd4b39 ;  " class="fas fa-envelope"></i>
+            </a>&nbsp;
+        <a href="tel:+1234567890" target="_blank">
+          
+            
+            <i style="font-size: 36px; color: blue;background-color: white;" class="fas fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="job-card">
+        <h2>Poster Designer</h2>
+        <p><strong>minimum 2 female</strong></p>
+        <p>📍Karanataka, India</p>
+        <p>💰 ₹1000 + ₹100</p>
+        <p>🕒 2pm to 7pm</p>
+        <div class="job-actions">
+            <a href="mailto:info@company.com" target="_blank"><i style="font-size: 40px;padding:9px ; width:60px; margin:-10px; height:60px; color:white;border-radius: 50% ; background-color:#dd4b39 ;  " class="fas fa-envelope"></i>
+            </a>&nbsp;
+        <a href="tel:+1234567890" target="_blank">
+          
+            
+            <i style="font-size: 36px; color: blue;background-color: white;" class="fas fa-phone"></i>
+        </a>
+        </div>
+    </div><br>&nbsp;
+
+</section><br>
+
+<div class="footer">
+<footer>
+    
+    <p> 2024 @!!!!!. Built by MNNT</p>
+
+  </footer>
+</div>
+</center>
+</body>
+</html>
